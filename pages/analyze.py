@@ -6,8 +6,7 @@ from PyPDF2 import PdfReader
 from docx import Document
 
 # YOUR WORKING GROQ KEY
-GROQ_API_KEY = "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"
-
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", "fallback_key_for_local_test")
 st.title("Your Contract Analysis")
 st.warning("**NOT LEGAL ADVICE** – Always consult a qualified lawyer before signing.")
 

@@ -6,8 +6,7 @@ from PyPDF2 import PdfReader
 from docx import Document
 
 # YOUR GROQ KEY (same as before)
-GROQ_API_KEY = "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"
-
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", "fallback_key_for_local_test")
 st.set_page_config(page_title="Compare", page_icon="Balance Scale")
 
 st.markdown("<h1 style='color:#00ff99; text-align:center;'>Compare Two Contracts</h1>", unsafe_allow_html=True)
